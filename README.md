@@ -1,0 +1,1 @@
+This is a POC project written in TypeScript for using protractor to create and maintain UI tests.
