@@ -1,0 +1,37 @@
+{
+  "name": "protractor-type-script",
+  "version": "1.0.0",
+  "description": "Testing framework for protractor and typescript",
+  "main": "protractor.conf.ts",
+  "scripts": {
+    "start": "rd /s /q tmp",
+    "tsc": "tsc",
+    "test": "protractor tmp/protractor.conf.js",
+    "pretest": "npm run start && npm run tsc && npm run webdriver-update",
+    "webdriver-update": "node ./node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update --versions.chrome=76.0.3809.126 --gecko false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "na"
+  },
+  "author": "Alex Roman",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "fs-extra": "^8.1.0",
+    "mocha": "^6.2.2",
+    "mocha-junit-reporter": "^1.23.1",
+    "protractor": "^5.4.2",
+    "protractor-html-reporter-2": "^1.0.4",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "typescript": " 3.6.4",
+    "yargs": "^15.0.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.17"
+  }
+}
